@@ -8,11 +8,11 @@ A Claude Code plugin that automatically formats code files after every edit:
 ## Install
 
 ```bash
-# 1. 加入 marketplace（只要做一次）
+# 加入 marketplace
 /plugin marketplace add Ortlinde/crlf-tab-formatter
 
-# 2. 安裝 plugin
-/plugin install crlf-tab-formatter@Ortlinde/crlf-tab-formatter
+# 安裝
+/plugin install crlf-tab-formatter@ortlinde-tools
 ```
 
 ## Supported file types
