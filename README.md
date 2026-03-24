@@ -16,7 +16,7 @@ Cross-agent collaboration journal for multi-AI workflows. Provides continuity wh
 
 ```bash
 # 加入 marketplace
-/plugin marketplace add Ortlinde/crlf-tab-formatter
+/plugin marketplace add Ortlinde/eztools
 
 # 安裝個別 plugin
 /plugin install crlf-tab-formatter@ortlinde-tools
