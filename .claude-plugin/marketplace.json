@@ -10,6 +10,12 @@
       "description": "Auto-format code files to CRLF line endings and 4-space to Tab indentation after every edit.",
       "version": "1.0.0",
       "source": "./plugin/crlf-tab-formatter"
+    },
+    {
+      "name": "cowork-journal",
+      "description": "Cross-agent collaboration journal. Reads previous agents' work before edits, reminds to write journal entry after.",
+      "version": "1.0.0",
+      "source": "./plugin/cowork-journal"
     }
   ]
 }

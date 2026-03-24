@@ -1,9 +1,16 @@
-# crlf-tab-formatter
+# Ortlinde Tools
 
-A Claude Code plugin that automatically formats code files after every edit:
+A collection of Claude Code plugins.
 
-- **Line endings** → CRLF (`\r\n`)
-- **Indentation** → Tabs (converts 4-space indentation)
+## Plugins
+
+### [crlf-tab-formatter](plugin/crlf-tab-formatter)
+
+Auto-formats code files on every edit — converts line endings to CRLF and 4-space indentation to tabs.
+
+### [cowork-journal](plugin/cowork-journal)
+
+Cross-agent collaboration journal for multi-AI workflows. Provides continuity when multiple agents (Claude Code, Codex) work on the same codebase.
 
 ## Install
 
@@ -11,27 +18,10 @@ A Claude Code plugin that automatically formats code files after every edit:
 # 加入 marketplace
 /plugin marketplace add Ortlinde/crlf-tab-formatter
 
-# 安裝 plugin
+# 安裝個別 plugin
 /plugin install crlf-tab-formatter@ortlinde-tools
+/plugin install cowork-journal@ortlinde-tools
 ```
-
-## Supported file types
-
-JavaScript/TypeScript, Python, Go, Rust, Java, C/C++, C#, Ruby, PHP, Swift, Kotlin, Scala, Lua, Shell scripts, CSS/SCSS/LESS, HTML/XML, JSON/YAML/TOML, Markdown, SQL, Dart, Zig, Nim, Elixir, Vue, Svelte, Astro, and more.
-
-## How it works
-
-Registers a `PostToolUse` hook on `Write|Edit|MultiEdit` events. After Claude edits any supported file, the hook script:
-
-1. Converts 4-space indentation to tabs
-2. Normalizes line endings to CRLF
-
-## Customization
-
-Edit `hooks/format-crlf-tab.sh` to:
-- Add/remove file extensions in the `case` block
-- Change indentation width (replace `'    '` pattern)
-- Switch to LF instead of CRLF (remove the last `sed` command)
 
 ## License
 

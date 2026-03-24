@@ -1,0 +1,42 @@
+{
+  "name": "cowork-journal",
+  "version": "1.0.0",
+  "description": "Cross-agent collaboration journal. Reads previous agents' work before edits, reminds to write journal entry after.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/cowork-session-start.sh\""
+          }
+        ],
+        "description": "Clean up co-work session markers"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/cowork-pre-read.sh\""
+          }
+        ],
+        "description": "Read today's co-work journal before first file edit (once per session)"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/cowork-post-remind.sh\""
+          }
+        ],
+        "description": "Remind to write co-work journal entry after file edits (once per session)"
+      }
+    ]
+  }
+}
