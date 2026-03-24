@@ -9,22 +9,7 @@
       "name": "crlf-tab-formatter",
       "description": "Auto-format code files to CRLF line endings and 4-space to Tab indentation after every edit.",
       "version": "1.0.0",
-      "source": ".",
-      "strict": false,
-      "hooks": {
-        "PostToolUse": [
-          {
-            "matcher": "Write|Edit|MultiEdit",
-            "hooks": [
-              {
-                "type": "command",
-                "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/format-crlf-tab.sh\""
-              }
-            ],
-            "description": "Auto-format: CRLF + Tab indentation"
-          }
-        ]
-      }
+      "source": "./plugin/crlf-tab-formatter"
     }
   ]
 }

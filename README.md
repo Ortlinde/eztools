@@ -11,7 +11,7 @@ A Claude Code plugin that automatically formats code files after every edit:
 # 加入 marketplace
 /plugin marketplace add Ortlinde/crlf-tab-formatter
 
-# 安裝
+# 安裝 plugin
 /plugin install crlf-tab-formatter@ortlinde-tools
 ```
 
