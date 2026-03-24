@@ -8,11 +8,7 @@ A Claude Code plugin that automatically formats code files after every edit:
 ## Install
 
 ```bash
-# If published to a marketplace:
-/plugin install crlf-tab-formatter@YOUR_MARKETPLACE
-
-# Or install directly from GitHub:
-/plugin install gh:YOUR_USERNAME/crlf-tab-formatter
+/plugin install gh:Ortlinde/crlf-tab-formatter
 ```
 
 ## Supported file types
