@@ -16,6 +16,12 @@
       "description": "Cross-agent collaboration journal. Reads previous agents' work before edits, reminds to write journal entry after.",
       "version": "1.0.0",
       "source": "./plugin/cowork-journal"
+    },
+    {
+      "name": "unity-dev-rules",
+      "description": "Unity coding standards, self-review checklist, deliberate-development workflow, and ShareLogger enforcement. Installs skills and commands to ~/.claude/ on session start.",
+      "version": "1.0.0",
+      "source": "./plugin/unity-dev-rules"
     }
   ]
 }

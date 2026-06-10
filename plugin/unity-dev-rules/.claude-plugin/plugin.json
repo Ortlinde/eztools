@@ -1,0 +1,18 @@
+{
+  "name": "unity-dev-rules",
+  "version": "1.0.0",
+  "description": "Unity coding standards, self-review checklist, deliberate-development workflow, and ShareLogger enforcement. Installs skills and commands to ~/.claude/ on session start.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/install-rules.sh\""
+          }
+        ],
+        "description": "Install Unity dev skills and commands to ~/.claude/"
+      }
+    ]
+  }
+}
